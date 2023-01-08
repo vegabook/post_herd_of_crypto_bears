@@ -23,7 +23,7 @@ lbi <- logret(bi)
 x11(width = 10, height = 6)
 par(mfrow = c(1, 2))
 regress(lei, lti[, 2], legnd = F, hiDays = c(0, 100, 100), xlab = "ETH 1 month return", ylab = "Google trends 'crypto scam' same month return", main = "Price vs 'scam' search trend")
-regress(lei[1:(nrow(lei) - 1), ], lti[2:nrow(lti), 2], hiDays = c(100, 100, 100), legnd = F, diagnostics = T, xlab = "ETH 1 month return", ylab = "Google trends 'crypto scam' following month return", main = "...following month hindsight")
+regress(lbi[1:(nrow(lbi) - 1), ], lti[2:nrow(lti), 2], hiDays = c(100, 100, 100), legnd = F, diagnostics = T, xlab = "ETH 1 month return", ylab = "Google trends 'crypto scam' following month return", main = "...following month hindsight")
 
 
 
